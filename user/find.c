@@ -26,7 +26,7 @@ void find(char *path, char *target) {
         return;
     }
 
-    if (strlen(path) + 1 + DIRSIZ + 1 > sizeof buf) {
+    if (strlen(path) + 1 + DIRSIZ + 1 > sizeof(buf)) {
         printf("find: path too long\n");
         close(fd);
         return;
