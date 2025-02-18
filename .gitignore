@@ -20,3 +20,4 @@ xv6.out*
 .vagrant/
 submissions/
 qemu-5.1.0.tar.xz
+qemu-5.1.0/
