@@ -80,11 +80,11 @@ uint64 sys_uptime(void) {
     return xticks;
 }
 
-// int sys_trace(void) {
-//     int mask;
-//     if (argint(0, &mask) < 0)
-//         return -1;
+uint64 sys_trace(void) {
+    int mask;
+    if (argint(0, &mask) < 0)
+        return -1;
 
-//     myproc()->trace_mask = mask;
-//     return 0;
-// }
+    myproc()->trace_mask = mask;
+    return 0;
+}
