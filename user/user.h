@@ -23,7 +23,17 @@ int getpid(void);
 char* sbrk(int);
 int sleep(int);
 int uptime(void);
+
+// Lab syscall
+// Add an prototype of the new system call trace
+// usage: see user/trace.c
 int trace(int);
+
+// Lab syscall
+// Add an syscall that collects information about the running system.
+// usage: see user/sysinfotest.c
+struct sysinfo;
+int sysinfo(struct sysinfo*);
 
 // ulib.c
 int stat(const char*, struct stat*);

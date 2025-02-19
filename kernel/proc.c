@@ -642,3 +642,12 @@ void procdump(void) {
         printf("\n");
     }
 }
+
+void procnum(uint64* dst) {
+    *dst = 0;
+    struct proc* p;
+    for (p = proc; p < &proc[NPROC]; p++) {
+        if (p->state != UNUSED)
+            (*dst)++;
+    }
+}
